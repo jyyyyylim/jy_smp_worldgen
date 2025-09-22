@@ -1,0 +1,99 @@
+
+earlier in the conversation i have been working out how to vary the waviness of rivers based on continentalness which handily imitates real geography
+howveer now that im creating a new pack from the ground up, how would i go about adding a system like this?
+ChatGPT said:
+
+Got it 👍 You want to build rivers where waviness/undulation is modulated by continentalness — so that coast-adjacent rivers are straighter (short, direct drainage to the sea) while deep-inland rivers meander more (longer, wavier paths). That’s a very geography-realistic design.
+
+Here’s how you can implement this in Minecraft’s datapack noise system (1.21.5):
+
+1. Identify the knobs
+
+Vanilla rivers are defined in noise_router.rivers (a density function) and in the river splines inside the data/minecraft/worldgen/noise_settings/overworld.json.
+
+The river function is based on ridges noise, which is where the “waviness” lives.
+
+You can modulate this with continentalness noise to conditionally increase or decrease the distortion.
+
+2. Create a control function
+
+Make a new density function that translates continentalness into a waviness factor. Example:
+
+{
+  "type": "spline",
+  "spline": {
+    "coordinate": "overworld/continentalness",
+    "points": [
+      { "location": -1.0, "value": 0.2 },   // near ocean → low waviness
+      { "location": -0.2, "value": 0.5 },   // coast → medium waviness
+      { "location": 1.0,  "value": 1.2 }    // inland → high waviness
+    ]
+  }
+}
+
+
+Call this jy:rivers/waviness_control.
+
+3. Apply it to the river noise
+
+Where you normally have:
+
+"rivers": {
+  "type": "noise",
+  "noise": "minecraft:rivers",
+  "xz_scale": 1.0,
+  "y_scale": 0.0
+}
+
+
+replace it with something like:
+
+"rivers": {
+  "type": "mul",
+  "argument1": {
+    "type": "noise",
+    "noise": "minecraft:rivers",
+    "xz_scale": 1.0,
+    "y_scale": 0.0
+  },
+  "argument2": { "type": "density_function", "function": "jy:rivers/waviness_control" }
+}
+
+
+This multiplies the raw river displacement noise by your continentalness-based waviness factor.
+
+4. Control sharpness / channeling
+
+You can add extra control with clamp or abs functions around the river channel. For example, if you want inland rivers to be wider as well as wavier:
+
+"rivers": {
+  "type": "lerp",
+  "argument1": "jy:rivers/waviness_control",
+  "argument2": {
+    "type": "noise",
+    "noise": "minecraft:rivers",
+    "xz_scale": 0.75
+  },
+  "argument3": {
+    "type": "noise",
+    "noise": "minecraft:rivers",
+    "xz_scale": 1.5
+  }
+}
+
+
+That lerps between a “wide” and a “tight” version depending on continentalness.
+
+5. Plugging back into noise_router
+
+In your overworld.json noise router, you replace the vanilla "rivers" key with your modified function (mul/lerp), and then rewire it into the "final_density" and "initial_density_without_jaggedness" where rivers are normally subtracted.
+
+✅ Summary:
+
+Define a spline that maps continentalness → waviness factor.
+
+Multiply or lerp that factor into the rivers density function in the noise router.
+
+Plug back into terrain density so that inland rivers = wavy, coastal rivers = straighter.
+
+Do you want me to sketch a minimal working datapack snippet (just the noise_router and one extra file in worldgen/density_function) that would actually run in-game as a test?
