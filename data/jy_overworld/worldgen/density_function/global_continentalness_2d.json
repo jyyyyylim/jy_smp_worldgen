@@ -1,0 +1,13 @@
+{
+    // its supposed to be 2d, if only this all worked out as an effective heightmap without this to clamp
+    // and also, pos-neg continentalness is sea-to-land and i cant get it to invert for some fucking reasdon
+    "type": "add",
+        "argument1": {
+            "type": "y_clamped_gradient",
+            "from_y": -14,
+            "to_y": 136,
+            "from_value": 1,
+            "to_value": -1
+        },
+        "argument2": "jy_overworld:global_continentalness"
+}

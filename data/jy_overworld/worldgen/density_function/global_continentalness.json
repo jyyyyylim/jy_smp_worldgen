@@ -1,6 +1,6 @@
 {
-    "type": "minecraft:noise",
+    "type": "noise",
     "noise": "jy_overworld:global",
-    "xz_scale": 0.25,
+    "xz_scale": 0.09,
     "y_scale": -0.2
 }
