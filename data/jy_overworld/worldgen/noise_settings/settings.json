@@ -28,53 +28,53 @@
         "vein_gap": 0,
         "temperature": 0,
         "vegetation": 0,
-        "continents": {                 
-            "type": "noise",
-            "noise": "jy_overworld:global",
-            ///// MUST ALWAYS MIRROR GLOBAL XZ SCALE VALUES /////
-            "xz_scale": 0.25, 
-            "y_scale": 0
-            ////////////////////////////////////////////////////
-        },
+        "continents": "jy_overworld:global_continentalness_2d",
         "erosion": 0,
         "depth": 0,
         "ridges": 0,
         "initial_density_without_jaggedness": 0,
-        //test
         "final_density": {
+            
             "type": "add",
-            "argument1": {
-                // const
-                "type": "constant",
-                "argument": 0
+            "argument1": { // add flat elevation variations, further scaled by continentalness
+                "type": "mul",
+                "argument1": { // mul the absolute value of global cont...
+                    "type": "abs",
+                    "argument": {
+                        "type": "quarter_negative", 
+                        // "argument1": 0.2,
+                        "argument": "jy_overworld:global_continentalness_2d"
+                    }
+                }, 
+                "argument2": { // ...with the hill function
+                    "type": "noise",
+                    "noise": "jy_overworld:global_hill_elevation_fluct",
+                    "xz_scale": 0.46,
+                    "y_scale": 0.1
+                }
             },
-            // ADDITION: MASTER CONTINENTALNESS FUNCTION
-            "argument2": {
+            "argument2": { //clamping global base continent (land-sea) noise to -14~136
                 "type": "add",
                     "argument1": {
-                        // yclamp, biasing in a increasing gradient into 150 to prevent holes
-                        //temporasry hard offset by -14 for the plateau to coincide with waterline
                         "type": "y_clamped_gradient",
                         "from_y": -14,
                         "to_y": 136,
-                        "from_value": 1.0,
-                        "to_value": -1.2
+                        "from_value": 1,
+                        "to_value": -1
+                        // "type": "constant",
+                        // "argument": 0
                     },
-                    "argument2": {
-                        // global noise
-                        // not to be concerned with biome specific elevations and terrain shape, that should be done in post or from layering other noise
-                        // this is only the master "state" from which to define fundamental land-seas
-                        "type": "noise",
-                        "noise": "jy_overworld:global",
-                        "xz_scale": 0.25,
-                        "y_scale": -0.2
+                    "argument2": { // main continental noise, flipped for proportional alignment (unconfirmed) with the continentalness value plot
+                        "type": "mul",
+                        "argument1": -1,
+                        "argument2": "jy_overworld:global_continentalness"
+                        // weird scaled sampler river trenches, biased with continentalness
                     }
             }
-            // layer perlin to bias land clusters together?
-            // }
         }
     },
     "surface_rule": {
+        
         "type": "minecraft:sequence",
         "sequence": [
             {
@@ -95,7 +95,63 @@
                         "Name": "minecraft:bedrock"
                     }
                 }
-            }   
+            },
+            {
+                "type": "minecraft:condition",
+                "if_true": {
+                    "type": "biome",
+                    "biome_is": ["jy_overworld:plains"]
+                }, 
+                "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                        "Name": "minecraft:grass_block"
+                    }
+                }
+            },
+            {
+                "type": "minecraft:condition",
+                "if_true": {
+                    "type": "biome",
+                    "biome_is": ["jy_overworld:beach"]
+                }, 
+                "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                        "Name": "minecraft:sand"
+                    }
+                }
+            },
+            {
+                "type": "minecraft:condition",
+                "if_true": {
+                    "type": "biome",
+                    "biome_is": ["jy_overworld:ocean"]
+                }, 
+                "then_run": {
+                    "type": "minecraft:block",
+                    "result_state": {
+                        "Name": "minecraft:gravel"
+                    }
+                }
+            }
+            // {
+            //     "type": "condition",
+            //     "if_true": {
+            //         "type": "noise_threshold",
+            //         "noise": "jy_overworld:global",
+            //         "xz_scale": 0.25,
+            //         "y_scale": 0,
+            //         "min_threshold": -0.173,
+            //         "max_threshold": -0.173
+            //     },
+            //     "then_run": {
+            //         "type": "minecraft:block",
+            //         "result_state": {
+            //             "Name": "minecraft:sand"
+            //         }
+            //     }
+            // }
         ]
     }
 }
