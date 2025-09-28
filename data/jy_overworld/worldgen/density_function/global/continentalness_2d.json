@@ -2,5 +2,6 @@
     "type": "noise",
     "noise": "jy_overworld:global",
     "xz_scale": 0.12,
-    "y_scale": -0.2
+    "y_scale": 0
+
 }

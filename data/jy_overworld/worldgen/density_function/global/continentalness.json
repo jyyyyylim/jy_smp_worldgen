@@ -1,0 +1,6 @@
+{ // anythign prefixed with global- must be sourced by everything with postprocessing done in respective parts 
+    "type": "noise",
+    "noise": "jy_overworld:global",
+    "xz_scale": 0.12,
+    "y_scale": -0.2
+}
