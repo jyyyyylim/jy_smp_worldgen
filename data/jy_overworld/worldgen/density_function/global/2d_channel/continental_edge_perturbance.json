@@ -1,14 +1,14 @@
 {
     "type": "add",
-    "argument1": "jy_overworld:global/continentalness_2d",
+    "argument1": "jy_overworld:global/2d_channel/continentalness",
     "argument2": {
         "type": "mul",
-        "argument1": 0.094,
+        "argument1": 0.1,
         "argument2": {
             "type": "noise",
             "noise": "jy_overworld:global_continentalbase",
-            "xz_scale": 0.3,
-            "y_scale": 2
+            "xz_scale": 0.01,
+            "y_scale": 4
         }
         
     }

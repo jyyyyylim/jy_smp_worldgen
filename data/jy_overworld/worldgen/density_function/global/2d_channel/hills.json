@@ -1,0 +1,10 @@
+{ //clamping global base continent (land-sea) noise to -14~136
+    "type": "add",
+        "argument1": "jy_overworld:global/2d_channel/master_elevation_scale",
+        "argument2": {
+            "type": "noise",
+            "noise": "jy_overworld:global",
+            "xz_scale": 0.12,
+            "y_scale": 0.02
+        }
+}
