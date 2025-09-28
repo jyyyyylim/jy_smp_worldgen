@@ -12,9 +12,8 @@
     },
     "spawn_target": [],
     "noise": {
-        "height": 640,
+        "height": 1024,
         "min_y": -64,
-        "max_y": 512,
         "size_horizontal": 4,
         "size_vertical": 1
     },
@@ -37,21 +36,23 @@
             
             "type": "add",
             "argument1": { // add flat elevation variations, further scaled by continentalness
-                "type": "mul",
-                "argument1": { // mul the absolute value of global cont...
-                    "type": "abs",
-                    "argument": {
-                        "type": "quarter_negative", 
-                        // "argument1": 0.2,
-                        "argument": "jy_overworld:global_continentalness_2d"
-                    }
-                }, 
-                "argument2": { // ...with the hill function
-                    "type": "noise",
-                    "noise": "jy_overworld:global_hill_elevation_fluct",
-                    "xz_scale": 0.46,
-                    "y_scale": 0.1
-                }
+                // "type": "mul",
+                // "argument1": { // mul the absolute value of global cont...
+                //     "type": "abs",
+                //     "argument": {
+                //         "type": "quarter_negative", 
+                //         // "argument1": 0.2,
+                //         "argument": "jy_overworld:global_continentalness_2d"
+                //     }
+                // }, 
+                // "argument2": { // ...with the hill function
+                //     "type": "noise",
+                //     "noise": "jy_overworld:global_hill_elevation_fluct",
+                //     "xz_scale": 0.46,
+                //     "y_scale": 0.1
+                // }
+                "type": "constant",
+                "argument": 0
             },
             "argument2": { //clamping global base continent (land-sea) noise to -14~136
                 "type": "add",

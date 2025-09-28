@@ -9,5 +9,10 @@
             "from_value": 1,
             "to_value": -1
         },
-        "argument2": "jy_overworld:global_continentalness"
+        "argument2": {
+            "type": "noise",
+            "noise": "jy_overworld:global",
+            "xz_scale": 0.12,
+            "y_scale": -0.2
+        }
 }
