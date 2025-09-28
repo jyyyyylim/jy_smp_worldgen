@@ -27,7 +27,7 @@
         "vein_gap": 0,
         "temperature": 0,
         "vegetation": 0,
-        "continents": "jy_overworld:global/continentalness_2d", // todo edge perturbance
+        "continents": "jy_overworld:global/continental_edge_perturbance", // todo edge perturbance
         "erosion": 0,
         "depth": 0,
         "ridges": 0,
