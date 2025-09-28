@@ -9,7 +9,7 @@
         {
           "biome": "jy_overworld:plains",
           "parameters": {
-            "continentalness": [0.08, 1],
+            "continentalness": [0.1, 1],
             "depth": 0,
             "erosion": 0,
             "humidity": 0,
