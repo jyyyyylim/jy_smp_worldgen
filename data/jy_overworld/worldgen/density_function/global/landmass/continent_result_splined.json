@@ -1,41 +1,15 @@
 {
-    "type": "mul", // mul: base hill noise by continentalness
-    "argument1": "jy_overworld:global/2d_channel/hills",
+    "type": "add",
+    "argument1": "jy_overworld:global/2d_channel/master_elevation_scale",
     "argument2": {
-        "type": "add",
-        "argument1": {
-            "type": "spline",
-            "spline": {
-                "coordinate": "jy_overworld:global/2d_channel/continentalness",
-                "points": [
-                    { 
-                        "location": -1, 
-                        "value": 40, 
-                        "derivative": 0 
-                    },{ 
-                        "location": -0.1, 
-                        "value": -0.008, 
-                        "derivative": 1
-                    },{ 
-                        "location": 0, 
-                        "value": 40, 
-                        "derivative": 0 
-                    },{ 
-                        "location": 0.5, 
-                        "value": 9.0, 
-                        "derivative": 0 
-                    },{ 
-                        "location": 1, 
-                        "value": 40, 
-                        "derivative": 0 
-                    }
-                ]
-            }
-        },
+        "type": "mul", // trying: (hills*normalisedcont)+globalelevscale
+        "argument1": "jy_overworld:global/2d_channel/hills",
+    
         "argument2": {
             "type": "add",
             "argument1": 1,
-            "argument2": "jy_overworld:global/2d_channel/continentalness"
+            "argument2": "jy_overworld:global/2d_channel/continentalness_splined"
         }
-        }
+
+    }
 }
