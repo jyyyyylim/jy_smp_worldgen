@@ -9,43 +9,43 @@
             },
             "points": [
                 { 
-                    "location": -1.0, 
+                    "location": -1.0, //lowest possible point, placeholder 
                     "value": 0.02, 
                     "derivative": 0 
                 },{ 
-                    "location": -0.5, 
+                    "location": -0.5, // abyssal plain
                     "value": 0.001, 
                     "derivative": 0 
                 },{ 
-                    "location": -0.2, 
+                    "location": -0.2, // continental shelf
                     "value": 0.7, 
                     "derivative": 0 
                 },{ 
-                    "location": -0.15, 
+                    "location": -0.15, // continental shelf edge
                     "value": 0.03, 
                     "derivative": 0 
                 },{ 
-                    "location": -0.1, 
+                    "location": -0.1, // lower beach
                     "value": 0.001, 
                     "derivative": 0
                 },{ 
-                    "location": 0.1, 
+                    "location": 0.1, // upper beach
                     "value": 0.001, 
                     "derivative": 0 
                 },{ 
-                    "location": 0.12, 
+                    "location": 0.12, // upper beach edgeside
                     "value": 0.003, 
                     "derivative": 0 
                 },{ 
-                    "location": 0.13, 
+                    "location": 0.13, // upper beach erosion edge
                     "value": 0.4, 
                     "derivative": 0 
                 },{ 
-                    "location": 0.26, 
+                    "location": 0.26, // beachside flats 
                     "value": 0.12, 
                     "derivative": 0 
                 },{ 
-                    "location": 1.0, 
+                    "location": 1.0, // highest possible point, placeholder
                     "value": 4, 
                     "derivative": 0 
                 }

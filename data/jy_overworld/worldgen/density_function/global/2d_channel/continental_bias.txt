@@ -1,0 +1,13 @@
+- layer main continental noise with another layer of noise for actual continents
+    - maybe dedicate a channel to "rockiness" which amplifies gradient shifts
+        - analogue to geographic "softness" irl, can also modulate biome variants
+- spline with small intervals and big value flucts= small trenches
+- river func: trenches with undulation and "rootiness" modulated by continental values 
+    - if pos, rivers
+    - if neg, volcanism?
+        - or is that governed by fuzzed continent edges?
+
+        
+- structure block trees?
+    - treefeller addon, when holding special offhand item? (guide to basic physics)
+        - amplified axe dura damage
