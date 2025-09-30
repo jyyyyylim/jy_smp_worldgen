@@ -1,12 +1,7 @@
 {
     "type": "spline",
         "spline": {
-            "coordinate": {
-                "type": "noise",
-                "noise": "jy_overworld:global",
-                "xz_scale": 0.12,
-                "y_scale": 0
-            },
+            "coordinate": "jy_overworld:global/2d_channel/continentalness",
             "points": [
                 { 
                     "location": -1.0, //lowest possible point, placeholder 
@@ -18,27 +13,56 @@
                     "derivative": 0 
                 },{ 
                     "location": -0.2, // continental shelf
-                    "value": 0.7, 
+                    "value": {
+                        "coordinate": "jy_overworld:global/2d_channel/continentalness_b",
+                        "points": [
+                            {
+                                "location": -0.9,
+                                "value": 0.2,
+                                "derivative": 0.0
+                            },{
+                                "location": -0.4,
+                                "value": 0.9,
+                                "derivative": 0.0
+                            },{
+                                "location": -0.11,
+                                "value": 0.5,
+                                "derivative": 0.0
+                            },{
+                                "location": 0.11,
+                                "value": 0.5,
+                                "derivative": 0.0
+                            },{
+                                "location": 0.4,
+                                "value": 0.9,
+                                "derivative": 0.0
+                            },{
+                                "location": 0.9,
+                                "value": 0.2,
+                                "derivative": 0.0
+                            }
+                        ]
+                    }, 
                     "derivative": 0 
                 },{ 
                     "location": -0.15, // continental shelf edge
-                    "value": 0.03, 
-                    "derivative": 0 
-                },{ 
-                    "location": -0.1, // lower beach
-                    "value": 0.001, 
-                    "derivative": 0
-                },{ 
-                    "location": 0.1, // upper beach
-                    "value": 0.001, 
-                    "derivative": 0 
-                },{ 
-                    "location": 0.12, // upper beach edgeside
                     "value": 0.003, 
                     "derivative": 0 
                 },{ 
+                    "location": -0.1, // lower beach
+                    "value": 0.0002, 
+                    "derivative": 0
+                },{ 
+                    "location": 0.1, // upper beach
+                    "value": 0.0001, 
+                    "derivative": 0 
+                },{ 
+                    "location": 0.12, // upper beach edgeside
+                    "value": 0.03, 
+                    "derivative": 0 
+                },{ 
                     "location": 0.13, // upper beach erosion edge
-                    "value": 0.4, 
+                    "value": 0.6, 
                     "derivative": 0 
                 },{ 
                     "location": 0.26, // beachside flats 

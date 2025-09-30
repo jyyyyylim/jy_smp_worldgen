@@ -1,4 +1,4 @@
-{ //clamping global base continent (land-sea) noise to -14~136
+{
     "type": "noise",
     "noise": "jy_overworld:global",
     "xz_scale": 0.12,
