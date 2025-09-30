@@ -61,7 +61,7 @@
                 "type": "minecraft:condition",
                 "if_true": {
                     "type": "biome",
-                    "biome_is": ["jy_overworld:plains"]
+                    "biome_is": ["jy_overworld:taiga"]
                 }, 
                 "then_run": {
                     "type": "minecraft:block",
@@ -79,7 +79,7 @@
                 "then_run": {
                     "type": "minecraft:block",
                     "result_state": {
-                        "Name": "minecraft:sandstone"
+                        "Name": "minecraft:sand"
                     }
                 }
             },
@@ -92,7 +92,7 @@
                 "then_run": {
                     "type": "minecraft:block",
                     "result_state": {
-                        "Name": "minecraft:andesite"
+                        "Name": "minecraft:gravel"
                     }
                 }
             }
