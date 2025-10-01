@@ -13,8 +13,8 @@
 `execute in jy_overworld at @a ~ ~ ~`
 
 ## key progress, urgency descending
-- [/] Just Works
-- [/] basic continentalness
+- [x] Just Works
+- [x] basic continentalness
 - [ ] rivers
 - [ ] tectonics and approxs
 - [ ] full alloc/realloc of vanilla BB values
