@@ -4,8 +4,8 @@
  - as faithful to actual geography as possible, appropriately scaled to best-effort 
  - incorporation of balance theories for smp longevity. not elaborating here
  - staying vanilla: 
-  - retaining-reworking as much vanilla biomes as possible, using no modded blocks.
-  - adding in realworld geographic analogues as best approximated by the exposed config system, when artstyle/"vibes" dont clash with vanilla
+   - retaining-reworking as much vanilla biomes as possible, using no modded blocks.
+   - adding in realworld geographic analogues as best approximated by the exposed config system, when artstyle/"vibes" dont clash with vanilla
  
 
 ## usage (tentative)
