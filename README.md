@@ -28,6 +28,7 @@
   - [ ] volcanic regions? 
 - [ ] full repurposing/realloc of vanilla BB values
   - [x] continentalness
+  - [ ] weirdness
   - [ ] ridges
   - [ ] erosion
   - [ ] temperature
