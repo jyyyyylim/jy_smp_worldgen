@@ -1,0 +1,5 @@
+{
+    "type": "mul",
+    "argument1": "jy_overworld:global/2d_channel/continentalness",
+    "argument2": "jy_overworld:global/2d_channel/cmultiplier_perturbance_b"
+}

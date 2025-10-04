@@ -1,4 +1,4 @@
-{// spline governing a multiplier that eases towards 1 when approaching 0
+{
     "type": "spline",
         "spline": {
             "coordinate": "jy_overworld:global/2d_channel/continental_edge_perturbance",
@@ -82,7 +82,7 @@
                     "derivative": 0 
                 },{ 
                     "location": 1.0, // highest possible point, placeholder
-                    "value": 1, 
+                    "value": 2, 
                     "derivative": 0 
                 }
             ]

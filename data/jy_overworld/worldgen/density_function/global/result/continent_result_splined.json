@@ -1,0 +1,14 @@
+{
+    "type": "add",
+    "argument1": "jy_overworld:global/2d_channel/master_elevation_scale",
+    "argument2": {
+        "type": "add", // trying: (hills*normalisedcont)+globalelevscale
+        "argument1": "jy_overworld:global/2d_channel/continentalness_splined",    
+        "argument2": {
+            "type": "mul",
+            "argument1": 0,
+            "argument2": "jy_overworld:global/2d_channel/hills"
+        }
+
+    }
+}

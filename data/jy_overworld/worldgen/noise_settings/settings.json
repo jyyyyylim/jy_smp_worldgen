@@ -32,7 +32,8 @@
         "depth": 0,
         "ridges": 0,
         "initial_density_without_jaggedness": 0,
-        "final_density": "jy_overworld:global/landmass/continent_result_splined"
+        // "final_density": "jy_overworld:global/result/continent_result"
+        "final_density": "jy_overworld:global/result/continent_result_splined"
     },
     "surface_rule": {
         
