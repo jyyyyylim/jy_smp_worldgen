@@ -5,19 +5,19 @@
             "points": [
                 { 
                     "location": -1.0, //lowest possible point, placeholder 
-                    "value": -2, 
+                    "value": -1.03, 
                     "derivative": 0 
                 },{ 
                     "location": -0.6, // abyssal plain
-                    "value": -1, 
+                    "value": -0.88, 
                     "derivative": 0 
                 },{ 
-                    "location": -0.32, // continental shelf
-                    "value": -0.9,
+                    "location": -0.36, // continental shelf
+                    "value": -0.6,
                     "derivative": 0 
                 },{ 
-                    "location": -0.3, // continental shelf edge
-                    "value":  -0.3//{
+                    "location": -0.28, // continental shelf edge
+                    "value":  -0.3, //{
                     //     "coordinate": "jy_overworld:global/2d_channel/hills_perturbance",
                     //     "points": [
                     //         {
