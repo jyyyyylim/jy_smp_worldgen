@@ -17,44 +17,44 @@
                     "derivative": 0 
                 },{ 
                     "location": -0.3, // continental shelf edge
-                    "value": {
-                        "coordinate": "jy_overworld:global/2d_channel/hills_perturbance",
-                        "points": [
-                            {
-                                "location": -1,
-                                "value": -0.9,
-                                "derivative": 0.0
-                            },{
-                                "location": -0.9,
-                                "value": -0.8,
-                                "derivative": 0.0
-                            },{
-                                "location": -0.4,
-                                "value": -0.5,
-                                "derivative": 0.0
-                            },{
-                                "location": -0.11,
-                                "value": -0.9,
-                                "derivative": 0.0
-                            },{
-                                "location": 0,
-                                "value": -0.4,
-                                "derivative": 0.0
-                            },{
-                                "location": 0.4,
-                                "value": -0.7,
-                                "derivative": 0.0
-                            },{
-                                "location": 0.9,
-                                "value": -0.9,
-                                "derivative": 0.0
-                            },{
-                                "location": 1,
-                                "value": -0.2,
-                                "derivative": 0.0
-                            }
-                        ]
-                    },  
+                    "value":  -0.3//{
+                    //     "coordinate": "jy_overworld:global/2d_channel/hills_perturbance",
+                    //     "points": [
+                    //         {
+                    //             "location": -1,
+                    //             "value": -0.9,
+                    //             "derivative": 0.0
+                    //         },{
+                    //             "location": -0.9,
+                    //             "value": -0.8,
+                    //             "derivative": 0.0
+                    //         },{
+                    //             "location": -0.4,
+                    //             "value": -0.5,
+                    //             "derivative": 0.0
+                    //         },{
+                    //             "location": -0.11,
+                    //             "value": -0.9,
+                    //             "derivative": 0.0
+                    //         },{
+                    //             "location": 0,
+                    //             "value": -0.4,
+                    //             "derivative": 0.0
+                    //         },{
+                    //             "location": 0.4,
+                    //             "value": -0.7,
+                    //             "derivative": 0.0
+                    //         },{
+                    //             "location": 0.9,
+                    //             "value": -0.9,
+                    //             "derivative": 0.0
+                    //         },{
+                    //             "location": 1,
+                    //             "value": -0.2,
+                    //             "derivative": 0.0
+                    //         }
+                    //     ]
+                    // },  
                     "derivative": 0 
                 },{ 
                     "location": -0.23, // lower beach
