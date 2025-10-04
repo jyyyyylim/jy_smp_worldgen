@@ -1,12 +1,25 @@
 {
     "type": "add",
-    "argument1": "jy_overworld:global/2d_channel/continentalness",
+    "argument1": {
+        "type": "shifted_noise",
+        "noise": "jy_overworld:global",
+        "xz_scale": 0.12,
+        "y_scale": 0,
+        "shift_x": 0,
+        "shift_z": 0,
+        "shift_y": {
+            "type": "noise",
+            "noise": "jy_overworld:global_b",
+            "xz_scale": 0.4,
+            "y_scale": 2
+        }
+    },
     "argument2": {
         "type": "mul",
         "argument1": 1,
         "argument2": {
             "type": "noise",
-            "noise": "jy_overworld:global_continentalbase",
+            "noise": "jy_overworld:continentalness/global_continentalbase",
             "xz_scale": 0.002,
             "y_scale": 0
         }

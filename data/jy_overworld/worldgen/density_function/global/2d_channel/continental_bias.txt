@@ -4,6 +4,7 @@
 - spline with small intervals and big value flucts= small trenches
 - river func: trenches with undulation and "rootiness" modulated by continental values 
     - if pos, rivers
+        - erosion= noise mask: to multiply effect of river and coast carving?
     - if neg, volcanism?
         - or is that governed by fuzzed continent edges?
 

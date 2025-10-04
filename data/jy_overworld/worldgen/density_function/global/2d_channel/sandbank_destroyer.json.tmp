@@ -1,0 +1,3 @@
+// sleector: continentalness ABOVE -.13 AND BELOW .13
+// if pos, perturb
+// if neg, tbd

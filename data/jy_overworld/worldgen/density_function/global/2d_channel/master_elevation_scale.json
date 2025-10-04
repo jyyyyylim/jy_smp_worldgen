@@ -1,7 +1,8 @@
 {
-    "type": "y_clamped_gradient",
-    "from_y": -14,
-    "to_y": 140,
-    "from_value": 1,
-    "to_value": -1.02
+    "type": "add",
+    "argument1": {
+        "type": "constant",
+        "argument": 0
+    },
+    "argument2": "jy_overworld:global/2d_channel/lower_elevation_scale"
 }

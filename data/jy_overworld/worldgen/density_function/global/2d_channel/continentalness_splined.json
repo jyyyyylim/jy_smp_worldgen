@@ -3,87 +3,28 @@
         "spline": {
             "coordinate": "jy_overworld:global/2d_channel/continental_edge_perturbance",
             "points": [
-                { 
-                    "location": -1.0, //lowest possible point, placeholder 
-                    "value": -1.03, 
-                    "derivative": 0 
+                {
+                    "location": -1.0, "value": -1.03, "derivative": 0 //lowest possible point, placeholder  
                 },{ 
-                    "location": -0.6, // abyssal plain
-                    "value": -0.88, 
-                    "derivative": 0 
+                    "location": -0.6, "value": -0.88, "derivative": 0 // abyssal plain 
                 },{ 
-                    "location": -0.36, // continental shelf
-                    "value": -0.6,
-                    "derivative": 0 
+                    "location": -0.36, "value": -0.6, "derivative": 0 // continental shelf 
                 },{ 
-                    "location": -0.28, // continental shelf edge
-                    "value":  -0.3, //{
-                    //     "coordinate": "jy_overworld:global/2d_channel/hills_perturbance",
-                    //     "points": [
-                    //         {
-                    //             "location": -1,
-                    //             "value": -0.9,
-                    //             "derivative": 0.0
-                    //         },{
-                    //             "location": -0.9,
-                    //             "value": -0.8,
-                    //             "derivative": 0.0
-                    //         },{
-                    //             "location": -0.4,
-                    //             "value": -0.5,
-                    //             "derivative": 0.0
-                    //         },{
-                    //             "location": -0.11,
-                    //             "value": -0.9,
-                    //             "derivative": 0.0
-                    //         },{
-                    //             "location": 0,
-                    //             "value": -0.4,
-                    //             "derivative": 0.0
-                    //         },{
-                    //             "location": 0.4,
-                    //             "value": -0.7,
-                    //             "derivative": 0.0
-                    //         },{
-                    //             "location": 0.9,
-                    //             "value": -0.9,
-                    //             "derivative": 0.0
-                    //         },{
-                    //             "location": 1,
-                    //             "value": -0.2,
-                    //             "derivative": 0.0
-                    //         }
-                    //     ]
-                    // },  
-                    "derivative": 0 
+                    "location": -0.28, "value": -0.3, "derivative": 0 // continental shelf edge
                 },{ 
-                    "location": -0.23, // lower beach
-                    "value": -0.2, 
-                    "derivative": 0
+                    "location": -0.03, "value": -0.015, "derivative": 0// lower beach
                 },{ 
-                    "location": 0, // zero
-                    "value": 0, 
-                    "derivative": 0 
+                    "location": 0, "value": 0.005, "derivative": 0 // zero
                 },{ 
-                    "location": 0.01, // upper beach
-                    "value": 0.008, 
-                    "derivative": 0 
+                    "location": 0.02, "value": 0.01, "derivative": 0 // upper beach
                 },{ 
-                    "location": 0.12, // upper beach
-                    "value": 0.1, 
-                    "derivative": 0 
+                    "location": 0.14, "value": 0.05, "derivative": 0 // upper beach
                 },{ 
-                    "location": 0.13, // upper beach erosion edge
-                    "value": 0.2, 
-                    "derivative": 0 
+                    "location": 0.16, "value": 0.1, "derivative": 0 // upper beach erosion edge
                 },{ 
-                    "location": 0.21, // beachside flats 
-                    "value": 0.3, 
-                    "derivative": 0 
+                    "location": 0.21, "value": 0.3, "derivative": 0 // beachside flats 
                 },{ 
-                    "location": 1.0, // highest possible point, placeholder
-                    "value": 1, 
-                    "derivative": 0 
+                    "location": 1.0, "value": 1, "derivative": 0 // highest possible point, placeholder
                 }
             ]
         }

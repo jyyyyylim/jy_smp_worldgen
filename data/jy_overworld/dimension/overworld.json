@@ -21,7 +21,7 @@
         {
           "biome": "jy_overworld:beach",
           "parameters": {
-            "continentalness": [-0.18, 0.135],
+            "continentalness": [-0.13, 0.13],
             "depth": 0,
             "erosion": 0,
             "humidity": 0,
@@ -33,7 +33,7 @@
         {
           "biome": "jy_overworld:ocean",
           "parameters": {
-            "continentalness": [-1, -0.18],
+            "continentalness": [-1, -0.135],
             "depth": 0,
             "erosion": 0,
             "humidity": 0,
